@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>华夏商盟</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="js/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="pro-top clearfix">
+		<span class="fl"><img src="imgs/home-icon.png" alt="" id="home"></span>
+		<span class="pro-title">选项目</span>
+		<span class="fr"><img src="imgs/head-icon.png" alt=""></span>
+	</div>
+	<ul id="pro-title-li" class="clearfix">
+		<li>综合排序</li>
+		<li>更新时间</li>
+		<li>条件筛选</li>
+	</ul>
+	<div class="pro-search clearfix">
+		<input type="text" value="在当前条件下搜索" id="inps">
+		<span class="fr"></span>
+	</div>
+	<ul class="pro-list" id="proList">
+		<li class="list-first">
+			<div class="show-img"><img src="imgs/pro-list.png" alt=""></div>
+			<div class="show-about">
+				<p>盟易融</p>
+				<p>河北省某国企控股物流公司融资</p>
+				<p>
+					<span>融资金额：<span class="pro-money">30000万</span></span>
+					<span>所在地区：河北省</span>
+					<span>融资类型：其他融资</span>
+				</p>
+				<p class="clearfix"><button id="talk-about">约谈项目方</button><button id="show-tel">查看联系方式</button></p>
+			</div>
+		</li>
+		<li>
+			<div class="show-img"><img src="imgs/pro-list.png" alt=""></div>
+			<div class="show-about">
+				<p>盟易融</p>
+				<p>河北省某国企控股物流公司融资</p>
+				<p>
+					<span>融资金额：<span class="pro-money">30000万</span></span>
+					<span>所在地区：河北省</span>
+					<span>融资类型：其他融资</span>
+				</p>
+				<p class="clearfix"><button id="talk-about">约谈项目方</button><button id="show-tel">查看联系方式</button></p>
+			</div>
+		</li>
+		<li>
+			<div class="show-img"><img src="imgs/pro-list.png" alt=""></div>
+			<div class="show-about">
+				<p>盟易融</p>
+				<p>河北省某国企控股物流公司融资</p>
+				<p>
+					<span>融资金额：<span class="pro-money">30000万</span></span>
+					<span>所在地区：河北省</span>
+					<span>融资类型：其他融资</span>
+				</p>
+				<p class="clearfix"><button id="talk-about">约谈项目方</button><button id="show-tel">查看联系方式</button></p>
+			</div>
+		</li>
+	</ul>
+	<div class="foot">
+		<p>
+			<span class="cred">触屏版</span>
+			<span>电脑版</span>
+			<span>关于我们</span>
+		</p>
+		<p>
+			<span>联系我们</span>
+			<span class="pice"></span>
+			<span>建议与投诉</span>
+			<span class="pice"></span>
+			<span>诚聘英才</span>
+		</p>
+		<p>
+			copyright © 2016 北京华夏商盟版权所有 京ICP备16041114号
+		</p>
+	</div>
+	<script type=text/javascript src="js/swiper-3.4.2.min.js"></script>
+	<script>
+		(function (doc, win) {
+			var docEle = doc.documentElement,
+			resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			var recalCulate = function () {
+				var width = docEle.clientWidth;
+				docEle.style.fontSize = 100 * (width / 640) + 'px';
+			};
+			recalCulate();
+			if (!doc.addEventListener) return;
+				win.addEventListener(resizeEvent, recalCulate, false);
+		})(document, window); 
+		var inps=document.getElementById("inps");
+		var home=document.getElementById("home");
+		var proLi=document.getElementById("proList");
+		var lis=proLi.getElementsByTagName("li");
+		inps.onfocus=function () {
+				inps.value="";
+			}
+		home.onclick=function () {
+			window.location="index.html";
+		}
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].onclick=function () {
+				window.location="pro-more.html";
+		}
+	}
+	</script>
+</body>
+</html>

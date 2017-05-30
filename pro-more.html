@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>华夏商盟</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="js/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="pro-more-head clearfix">
+		<span class="fl"><img src="imgs/return.png" alt="" id="ret"></span>
+		<span class="pro-more-title">项目详情</span>
+		<span class="fr"><img src="imgs/head-icon.png" alt=""></span>
+	</div>
+	<div class="pro-more-top">
+		<div class="pro-message">
+			<p>河北省某国企控股物流公司融资</p>
+			<p><span>2016-11-24 11:11:15</span>浏览数：29人</p>
+			<p class="message-title"><span >项目类型：</span>项目融资</p>
+			<p class="message-title"><span >所在地区：</span>全国</p>
+			<p class="message-title"><span >资产估价：</span>30000万</p>
+			<p class="message-title"><span >融资阶段：</span></p>
+		</div>
+		<ul class="clearfix">
+			<li><img src="imgs/shoucang.png" alt="">收藏</li>
+			<li><img src="imgs/notice.png" alt="">举报</li>
+			<li><img src="imgs/share.png" alt="">分享</li>
+		</ul>
+	</div>
+	<div class="rongzi">
+		<span>股权融资</span>
+		<p class="message-title"><span >转让价格：</span>30000万</p>
+		<p class="message-title"><span >转让价格：</span>3%</p>
+		<p class="message-title"><span >截止时间：</span>2017年1月11日</p>
+	</div>
+	<div class="pro-more-mid" >
+		<ul class="clearfix" id="proMoreMid">
+			<li class="active">项目概述</li>
+			<li>项目优势</li>
+			<li>其他备注</li>
+		</ul>
+		<div>
+			<p>接受利率年化9%以内，天津某优质国企担保融资，接受利率年化9%以内，天津某优质国企担保融资。接受利率年化9%以内，天津某优质国企担保融资，接受利率年化9%以内，天津某优接受利率年化9%以内，天津某优质国企担保融资，接受利率年化9%以内，天津某优质国企担保融资。</p>
+			<img src="imgs/more-pro.png" alt="">
+			<a href="#">商业计划书：浏览</a>
+		</div>
+	</div>
+	<div class="foot pro-more-add">
+		<p>
+			<span class="cred">触屏版</span>
+			<span>电脑版</span>
+			<span>关于我们</span>
+		</p>
+		<p>
+			<span>联系我们</span>
+			<span class="pice"></span>
+			<span>建议与投诉</span>
+			<span class="pice"></span>
+			<span>诚聘英才</span>
+		</p>
+		<p>
+			copyright © 2016 北京华夏商盟版权所有 京ICP备16041114号
+		</p>
+	</div>
+	<p class="clearfix" id="btn"><button id="talk-about">约谈项目方</button><button id="show-tel">查看联系方式</button></p>
+	<script type=text/javascript src="js/swiper-3.4.2.min.js"></script>
+	<script>
+		(function (doc, win) {
+			var docEle = doc.documentElement,
+			resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			var recalCulate = function () {
+				var width = docEle.clientWidth;
+				docEle.style.fontSize = 100 * (width / 640) + 'px';
+			};
+			recalCulate();
+			if (!doc.addEventListener) return;
+				win.addEventListener(resizeEvent, recalCulate, false);
+		})(document, window);
+		var ret=document.getElementById("ret");
+		var proMoreMid=document.getElementById("proMoreMid");
+		var lis=proMoreMid.getElementsByTagName("li");
+		ret.onclick=function () {
+			window.location="select-pro.html";
+		}
+		function clear() {
+			for (var i = 0; i < lis.length; i++) {
+				lis[i].className="";
+			}
+		}
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].onclick=function () {
+				clear();
+				this.className="active";
+			}
+		}
+		document.body.onclick=function () {
+			window.location="sel-money-more.html";
+		}
+	</script>
+</body>
+</html>

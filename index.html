@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>华夏商盟</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="js/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="top clearfix">
+		<img src="logo.png" alt="">
+		<span><img src="imgs/phone.png" alt="">010-84845085</span>
+	</div>
+	<!-- 轮播 -->
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><img src="imgs/banner.png" alt=""></div>
+	        <div class="swiper-slide"><img src="imgs/banner.png" alt=""></div>
+	        <div class="swiper-slide"><img src="imgs/banner.png" alt=""></div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- 如果需要导航按钮 -->
+	   <!--  <div class="swiper-button-prev"></div>
+	   <div class="swiper-button-next"></div>
+	   
+	   如果需要滚动条
+	   <div class="swiper-scrollbar"></div> -->
+	</div>
+	<!-- 搜索框 -->
+	<div class="search-box clearfix">
+		<select id="top-search">
+			<option value="money">找资金</option>
+			<option value="project">找项目</option>
+			<option value="service">萌服务</option>
+			<option value="school">萌学园</option>
+		</select>
+		<input type="text" id="inps" value="请输入要搜索的关键词">
+		<a href="#"></a>
+	</div>
+	<div class="more-select clearfix" id="more-select">
+		<div class="fl">
+			<img src="imgs/find-money.png" alt="" id="">
+			<img src="imgs/meng-service.png" alt="">
+		</div>
+		<div class="fr">
+			<img src="imgs/find-pro.png" alt="" id="selectPro">
+			<img src="imgs/meng-school.png" alt="">
+		</div>
+		<a href="" id="login">登陆/注册</a>
+		
+	</div>
+	<div class="foot">
+		<p>
+			<span class="cred">触屏版</span>
+			<span>电脑版</span>
+			<span>关于我们</span>
+		</p>
+		<p>
+			<span>联系我们</span>
+			<span class="pice"></span>
+			<span>建议与投诉</span>
+			<span class="pice"></span>
+			<span>诚聘英才</span>
+		</p>
+		<p>
+			copyright © 2016 北京华夏商盟版权所有 京ICP备16041114号
+		</p>
+	</div>
+	<script type=text/javascript src="js/swiper-3.4.2.min.js"></script>
+	<script type=text/javascript src="js/index.js"></script>
+	<script>
+	var selectPro=document.getElementById('more-select');
+	var imgs=selectPro.getElementsByTagName("img");
+	for (var i = 0; i < imgs.length; i++) {
+		imgs[i].onclick=function () {
+			window.location="select-pro.html";
+		}
+	}
+	</script>
+</body>
+</html>
