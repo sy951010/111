@@ -19,8 +19,10 @@ var mySwiper = new Swiper ('.swiper-container', {
 	var more_select=document.getElementById("more-select");
 	var login=document.getElementById("login");
 	var inps=document.getElementById("inps");
+	window.onresize=function () {
 	login.style.left=(more_select.offsetWidth-login.offsetWidth)/2+"px";
 	login.style.top=(more_select.offsetHeight-login.offsetHeight)/2+"px";
+	}
 	inps.onfocus=function () {
 		inps.value="";
 	}
